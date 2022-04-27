@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="..accsesing keys/common.css" />
+
+
+    <style>
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    height: 50px;
+    width: 70%;
+    background-color: rgb(173, 104, 241);
+    margin-bottom: 20px;
+    border-radius: 5px;
+   
+}
+a{
+    color: aliceblue;
+    font-size: 36px;
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+<div id="navbar">
+    <div><a href="backend.html">Backend</a></div>
+    <div> <a href="frontend.html">Frontend</a> </div>
+
+</div>
+
+    <form id="inveform">
+   <input id="name" type="text" placeholder="Enter Name">
+   <input id="imgUrl" type="text" placeholder="Enter imgurl">
+   <input id="logo"  type="text" placeholder="Enter company logo">
+   <input id="role" type="text" placeholder="Enter role">
+
+   <input type="submit">
+
+
+    </form>
+</body>
+</html>
+
+<script>
+document.querySelector("#inveform").addEventListener("submit",myfunction)
+
+var arrofinvestor= JSON.parse(localStorage.getItem("investorsData"))||[]
+
+function myfunction(){
+    event.preventDefault();
+
+    var investrobj={
+     investorname:inveform.name.value,
+     investoreimage:inveform.imgUrl.value,
+     investoreplace:inveform.role.value,
+     investorcompany:inveform.logo.value,
+
+
+    }
+
+    arrofinvestor.push(investrobj);
+    console.log(arrofinvestor)
+    localStorage.setItem("inveseterData",JSON.stringify(arrofinvestor))
+
+
+
+}
+
+
+</script>
