@@ -1,0 +1,38 @@
+div{
+    margin:100px auto ;
+   display: flex; 
+    height: 200px;
+    width: 400px;
+    background-color: blanchedalmond;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+body{
+    background-color: grey;
+}
+div>button:nth-child(1){
+    height: 100px;
+    width : 100px;
+    background-color: blueviolet;
+    font-size: 20px;
+    color: aliceblue;
+
+}
+div>button:nth-child(3){
+    height: 100px;
+    width : 100px;
+    background-color: brown;
+    font-size: 20px;
+    color: aliceblue;
+}
+h1{
+    height: 100px;
+    width : 100px; 
+    background-color: rgb(174, 235, 215); 
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
