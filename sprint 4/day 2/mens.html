@@ -15,10 +15,74 @@
         grid-template-rows: repeat(1,auto);
         gap: 10px;
     }
+    
+    a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+        }
+        
+   
+        .nav{
+            display: flex;
+            height: 50px;
+            background-color: rgb(80, 122, 239);
+          
+        }
+        
+        
+        
+        .text{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .user{
+            width: 30%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+       
+        #logo{
+          height: 100%;
+          width: 120px;
+          color: #f90000;
+          font-size: 20px;
+          display: flex;
+          align-items: center;
+          background-color: #ffffff;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(156, 31, 31, 0.06) 0px 0px 0px 1px;
+        }
+        button{
+          height: 20px;
+          width: 100px;
+          background-color: rgb(95, 95, 232);
+          color:#fff;
+          border: 0px;
+          border-radius: 5px;
+        }
+        
 </style>
 
 </head>
 <body>
+  <div class="nav">
+    <div id="logo">Masai E-com</div>
+    <div class="text">
+        <div> <a href="./womens.html"> Women </a> </div>
+        <div> <a href="./mens.html"> Men </a> </div>
+        <div> <a href="./mens.html"> Kids </a> </div>
+          <div><a href="./mens.html"> Electronics </a>  </div>
+    </div>
+    <div class="user">
+      <div> <a href="./signup.html"> Sign up </a></div>
+        <div> <a href="./signin.html"> Sign in </a></div>
+    </div>
+</div>
+
     <h1>MENS PAGE</h1>
     <div id="mens_container"></div>
 </body>

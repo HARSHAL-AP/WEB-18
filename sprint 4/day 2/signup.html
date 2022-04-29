@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<style>
+   *{
+       font-family: sans-serif;
+   }
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+ body{
+    background-color: rgb(128, 123, 123);
+ }
+form{
+    width: 30%;
+    background-color: rgb(255, 255, 255);
+    margin: 20px auto;
+    padding: 2%;
+    border-radius: 10px;
+}
+input{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+  border-bottom: 3px solid rgb(150, 148, 148);
+  font-size: 15px;
+  font-family: sans-serif;
+}
+p{
+    text-align: center;
+    margin-top: 20px;
+}
+form>input:nth-child(5){
+    background-color: rgb(244, 107, 107);
+    color: #ffff;
+    border-radius: 10px;
+    font-size: 20px;
+    border-bottom: none;
+}
+</style>
+<body>
+    <form>
+        <h1>Create a new Account</h1>
+        <input id="username" type="text" placeholder="Username">
+        <input type="email" placeholder="Email" name="" id="email">
+        <input type="password" placeholder="Password" name="" id="password">
+        <input type="submit" value="Create Account">
+        <p>Already have a account? <a href="./signin.html"> Signin </a></p>
+    </form>
+</body>
+
+<script>
+  let form=document.querySelector("form");
+  let LSData=JSON.parse(localStorage.getItem("userData"));
+  form.addEventListener("submit",function(event) {
+      event.preventDefault();
+      const data={
+       username:form.username.value,
+       email: form.email.value,
+       password:form.password.value,
+      }
+      if(LSData != null && LSData.email === data.email){
+          alert("Account already exist. Please Login");
+          return;
+      }
+
+      localStorage.setItem("userData",JSON.stringify(data));
+      alert("Signup successful. Please Signin")
+  })
+</script>
+</html>
